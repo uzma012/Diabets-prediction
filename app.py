@@ -44,5 +44,6 @@ def predict(data: PatientData):
         data.Age
     ]])
     prediction = model.predict(input_array)[0]
+    print(f"Prediction: {prediction}")  # Debugging output
     result = "Diabetic" if prediction == 1 else "Non-Diabetic"
     return {"prediction": result}
